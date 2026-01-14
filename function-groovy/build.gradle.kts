@@ -1,0 +1,17 @@
+plugins {
+    id("io.micronaut.build.internal.groovy-module")
+}
+
+dependencies {
+    compileOnly(mn.micronaut.inject.groovy)
+
+    implementation(projects.micronautRuntimeGroovy)
+    implementation(mn.micronaut.function)
+
+    testImplementation(mn.micronaut.function.web)
+    testImplementation(mn.micronaut.http.client)
+    testImplementation(mn.micronaut.inject.groovy)
+    testImplementation(mn.micronaut.jackson.databind)
+
+    testRuntimeOnly(mn.micronaut.http.server.netty)
+}
