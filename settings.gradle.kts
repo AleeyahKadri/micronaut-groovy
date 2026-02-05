@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+plugins {
+    id("io.micronaut.build.shared.settings") version "8.0.0-M13"
+}
+
+rootProject.name = "groovy-parent"
+
+include("function-groovy")
+include("groovy-bom")
+include("runtime-groovy")
+
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+micronautBuild {
+    useStandardizedProjectNames = true
+    importMicronautCatalog()
+}

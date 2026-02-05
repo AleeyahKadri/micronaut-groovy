@@ -1,9 +1,9 @@
 plugins {
-    id 'io.micronaut.build.internal.bom'
+    id("io.micronaut.build.internal.bom")
 }
 
 dependencies {
-    api platform("org.apache.groovy:groovy-bom:${libs.versions.groovy.get()}")
+    api(platform("org.apache.groovy:groovy-bom:${libs.versions.groovy.get()}"))
 }
 
 micronautBom {
