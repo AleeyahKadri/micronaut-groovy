@@ -1,0 +1,9 @@
+plugins {
+    id("io.micronaut.build.internal.groovy-module")
+}
+
+dependencies {
+    api(mn.groovy)
+
+    implementation(mn.micronaut.inject)
+}
